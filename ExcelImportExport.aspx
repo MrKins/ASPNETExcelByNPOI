@@ -13,5 +13,25 @@
             <asp:Button ID="btnExport" runat="server" Text="导出" CssClass="btn btn-warning" OnClick="btnExport_Click" />
         </div>
     </div>
-
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>客户ID</th>
+                <th>客户名</th>
+                <th>客户地址</th>
+            </tr>
+        </thead>
+        <tbody>
+            <asp:Repeater ID="repeaterCustomer" runat="server">
+                <ItemTemplate>
+                    <tr>
+                        <td><%# Eval("customerID") %></td>
+                        <td><%# Eval("customerName") %></td>
+                        <td><%# Eval("customerAddress") %></td>
+                    </tr>
+                </ItemTemplate>
+            </asp:Repeater>
+        </tbody>
+    </table>
 </asp:Content>

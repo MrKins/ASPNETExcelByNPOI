@@ -19,7 +19,8 @@ namespace ASPNETExcelByNPOI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            repeaterCustomer.DataSource = client.GetCustomer("");
+            repeaterCustomer.DataBind();
         }
 
         protected void btnImport_Click(object sender, EventArgs e)
